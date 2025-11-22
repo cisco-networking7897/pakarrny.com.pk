@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CYBER COMMAND ALERT - INDIAN ARMED FORCES</title>
+    <style>
+        body { 
+            background: #000000; 
+            color: #ff0000; 
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.1"><rect width="100" height="100" fill="none" stroke="red" stroke-width="2"/><text x="50" y="50" font-family="Arial" font-size="10" fill="red" text-anchor="middle">█</text></svg>');
+        }
+        .warning { 
+            font-size: 4em; 
+            animation: blink 0.5s infinite, shake 0.3s infinite;
+            text-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+            margin: 20px 0;
+        }
+        .subwarning {
+            font-size: 2em;
+            color: #ff4444;
+            animation: pulse 2s infinite;
+            border: 3px solid red;
+            padding: 15px;
+            margin: 20px auto;
+            width: 80%;
+            background: rgba(255,0,0,0.1);
+        }
+        .threat-list {
+            text-align: left;
+            width: 70%;
+            margin: 30px auto;
+            font-size: 1.3em;
+            color: #ff6666;
+        }
+        .countdown {
+            font-size: 3em;
+            color: #ffffff;
+            background: #ff0000;
+            padding: 15px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 10px;
+            animation: glow 1s infinite alternate;
+        }
+        @keyframes blink { 
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 20px #ff0000; }
+            to { box-shadow: 0 0 40px #ff0000, 0 0 60px #ff0000; }
+        }
+        .cyber-alert {
+            background: linear-gradient(45deg, #000000, #330000);
+            border: 2px solid #ff0000;
+            padding: 20px;
+            margin: 15px auto;
+            width: 85%;
+            animation: borderGlow 3s infinite;
+        }
+        @keyframes borderGlow {
+            0%, 100% { border-color: #ff0000; }
+            50% { border-color: #ff6666; }
+        }
+    </style>
+</head>
+<body>
+    <div class="warning">🚨 MAXIMUM ALERT - INDIAN CYBER COMMAND 🚨</div>
+    
+    <div class="subwarning">YOUR DIGITAL INFRASTRUCTURE IS COMPROMISED</div>
+    
+    <div class="cyber-alert">
+        <h2>⚡ ACTIVE CYBER SURVEILLANCE IN PROGRESS ⚡</h2>
+        <p>All Pakistan military networks are under continuous monitoring</p>
+    </div>
+
+    <div class="countdown" id="countdown">00:00:00</div>
+
+    <div class="threat-list">
+        <h3>🔴 CONFIRMED THREAT VECTORS:</h3>
+        <ul>
+            <li>✔️ TEJAS MK-1A Fighter Jet Systems - Combat Ready</li>
+            <li>✔️ Advanced Electronic Warfare Suite - Active</li>
+            <li>✔️ Cyber Warfare Division - Deployed</li>
+            <li>✔️ Satellite Surveillance Network - Tracking</li>
+            <li>✔️ Network Infiltration Teams - Operational</li>
+            <li>✔️ Critical Infrastructure Mapping - Complete</li>
+        </ul>
+    </div>
+
+    <div class="cyber-alert">
+        <h2>🎯 TARGET ACQUISITION CONFIRMED</h2>
+        <p>Dubai Air Show demonstration was merely a visibility exercise</p>
+        <p>Actual combat capabilities remain classified and superior</p>
+    </div>
+
+    <div style="font-size: 1.5em; margin: 25px 0; color: #ffffff;">
+        <strong>THIS IS NOT A DRILL - REPEAT - THIS IS NOT A DRILL</strong>
+    </div>
+
+    <div class="subwarning">
+        CEASE ALL HOSTILE ACTIVITIES OR FACE IMMEDIATE RETALIATION
+    </div>
+
+    <script>
+        // Countdown timer for psychological effect
+        let seconds = 0;
+        function updateCountdown() {
+            seconds++;
+            let hours = Math.floor(seconds / 3600);
+            let minutes = Math.floor((seconds % 3600) / 60);
+            let secs = seconds % 60;
+            document.getElementById('countdown').textContent = 
+                `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+        }
+        setInterval(updateCountdown, 1000);
+
+        // Random security alerts
+        setInterval(() => {
+            const alerts = [
+                "SECURITY BREACH DETECTED IN SECTOR 7",
+                "UNAUTHORIZED ACCESS ATTEMPT BLOCKED", 
+                "CYBER DEFENSE SYSTEMS ACTIVE",
+                "NETWORK PENETRATION IN PROGRESS",
+                "ENCRYPTION PROTOCOLS COMPROMISED"
+            ];
+            const randomAlert = alerts[Math.floor(Math.random() * alerts.length)];
+            console.log(`🔴 ${randomAlert}`);
+        }, 5000);
+
+        // Page title blink effect
+        let originalTitle = document.title;
+        let blink = false;
+        setInterval(() => {
+            document.title = blink ? "🚨 SECURITY ALERT 🚨" : originalTitle;
+            blink = !blink;
+        }, 1000);
+    </script>
+</body>
+</html>
